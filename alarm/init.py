@@ -8,7 +8,7 @@ def dateToTimeClear(a):
         a = a.split('.')[0]
     return a
     
-end_time = dateToTimeClear(datetime.strptime(input('Type time H:M:S'), '%H:%M:%S'))
+end_time = dateToTimeClear(datetime.strptime(input('Type time H:M:S -> '), '%H:%M:%S'))
 
 while True:
     start_time = dateToTimeClear(datetime.now())
@@ -16,10 +16,10 @@ while True:
 
     if start_time == end_time:
         mixer.init()
-        mixer.music.load("alarm.mp3")
+        mixer.music.load("file/alarm.mp3")
         mixer.music.play()
 
-        a = input("Pres yes: ")
+        a = input("Pres yes -> ")
 
         while True:
             if a == 'yes':
